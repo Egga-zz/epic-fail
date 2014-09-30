@@ -5,4 +5,4 @@ epic-fail
 
 Make them Fail! All of them!
 
-Purpose: Excersize and showcase the Hamcrest ecosystem. There shall not be a single passing test in here!
+Purpose: Excersize and showcase the Java assertion ecosystem. There shall not be a single passing test in here!
