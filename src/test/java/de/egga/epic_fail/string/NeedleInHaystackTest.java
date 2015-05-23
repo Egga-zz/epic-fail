@@ -1,9 +1,10 @@
-package egga.string;
+package de.egga.epic_fail.string;
 
+import de.egga.epic_fail.helper.AssertJ;
+import de.egga.epic_fail.helper.Hamcrest;
+import de.egga.epic_fail.helper.Truth;
 import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertTrue;
 
@@ -29,11 +30,16 @@ public class NeedleInHaystackTest {
 
     @Test
     public void hamcrest() {
-        assertThat(HAYSTACK, containsString(NEEDLE));
+        Hamcrest.assertThat(HAYSTACK, containsString(NEEDLE));
     }
 
     @Test
     public void assertJ() {
-        assertThat(HAYSTACK).contains(NEEDLE);
+        AssertJ.assertThat(HAYSTACK).contains(NEEDLE);
+    }
+
+    @Test
+    public void truth() {
+        Truth.assertThat(HAYSTACK).contains(NEEDLE);
     }
 }
